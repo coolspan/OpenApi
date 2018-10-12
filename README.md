@@ -1,15 +1,78 @@
 # OpenApi
 Provide a variety of crack/free API interface(提供各种破解/免费的Api接口)
 
-[TOC]
+[壁纸](https://github.com/coolspan/OpenApi#%E5%A3%81%E7%BA%B8)
+
+[必应壁纸](https://github.com/coolspan/OpenApi#必应壁纸)
+
+Clam音乐(近期提供...)
+
+Youtube(近期提供...)
+
+DropBox(近期提供...)
+
+[苹果序列号](https://github.com/coolspan/OpenApi#苹果序列号)
+
+[北京交警App](https://github.com/coolspan/OpenApi#北京交警App)
 
 ## 壁纸
 
 网站：https://unsplash.com/
 
-开放接口：https://unsplash.com/api-terms (以下提供的非此处的接口，通过其他方式获取到的)
+开放接口：https://unsplash.com/api-terms
 
 该网站提供各种类型的高清图片，可以作为壁纸使用；当然也可以利用此资源自己开发App发布到线上，收费可以下载壁纸各种玩法。
+
+## 必应壁纸
+
+网站：https://cn.bing.com/
+
+请求地址：https://www.bing.com/HPImageArchive.aspx
+
+请求方式：GET
+
+请求参数：
+
+| 参数名 |  类型  |          描述          |
+| :----: | :----: | :--------------------: |
+| format | String |       固定值：js       |
+|  idx   |  Int   | -1到15，-1代表最新壁纸 |
+|   n    |  Int   |       固定值：1        |
+
+响应内容：壁纸：www.biying.com + images中的url
+
+```json
+{
+    "images": [
+        {
+            "startdate": "20181012",
+            "fullstartdate": "201810121600",
+            "enddate": "20181013",
+            "url": "/az/hprichbg/rb/ZeroDegrees_ZH-CN10117368234_1920x1080.jpg",
+            "urlbase": "/az/hprichbg/rb/ZeroDegrees_ZH-CN10117368234",
+            "copyright": "激光艺术'0 Degrees'，英国格林威治 (© Norah Saudan/Getty)",
+            "copyrightlink": "http://www.bing.com/search?q=%E6%BF%80%E5%85%89%E8%89%BA%E6%9C%AF&form=hpcapt&mkt=zh-cn",
+            "title": "",
+            "quiz": "/search?q=Bing+homepage+quiz&filters=WQOskey:%22HPQuiz_20181012_ZeroDegrees%22&FORM=HPQUIZ",
+            "wp": false,
+            "hsh": "6b0670afccbfbe7c9d0153966151362a",
+            "drk": 1,
+            "top": 1,
+            "bot": 1,
+            "hs": []
+        }
+    ],
+    "tooltips": {
+        "loading": "正在加载...",
+        "previous": "上一个图像",
+        "next": "下一个图像",
+        "walle": "此图片不能下载用作壁纸。",
+        "walls": "下载今日美图。仅限用作桌面壁纸。"
+    }
+}
+```
+
+mac上自动设置必应壁纸为桌面壁纸的软件：https://github.com/zekunyan/TTGBingWallPaper
 
 ### 分类列表
 
